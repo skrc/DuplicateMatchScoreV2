@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		7180C1D2265ECA6000D56152 /* Scores+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7180C1CC265ECA6000D56152 /* Scores+CoreDataClass.swift */; };
 		7180C1D3265ECA6000D56152 /* Players+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7180C1CD265ECA6000D56152 /* Players+CoreDataClass.swift */; };
-		7180C1D4265ECA6000D56152 /* DuplicateMatchScore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7180C1CE265ECA6000D56152 /* DuplicateMatchScore.xcdatamodeld */; };
-		7180C1D5265ECA6000D56152 /* Match+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7180C1D0265ECA6000D56152 /* Match+CoreDataClass.swift */; };
+		7180C1D5265ECA6000D56152 /* Matches+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7180C1D0265ECA6000D56152 /* Matches+CoreDataClass.swift */; };
+		71838012265ED6B00097F6E9 /* DuplicateMatchScore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 71838010265ED6B00097F6E9 /* DuplicateMatchScore.xcdatamodeld */; };
 		719313C9265E9D6F00B4789F /* DuplicateMatchScoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719313C8265E9D6F00B4789F /* DuplicateMatchScoreApp.swift */; };
 		719313CB265E9D6F00B4789F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719313CA265E9D6F00B4789F /* ContentView.swift */; };
 		719313CD265E9D7100B4789F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719313CC265E9D7100B4789F /* Assets.xcassets */; };
@@ -21,8 +21,8 @@
 /* Begin PBXFileReference section */
 		7180C1CC265ECA6000D56152 /* Scores+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Scores+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7180C1CD265ECA6000D56152 /* Players+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Players+CoreDataClass.swift"; sourceTree = "<group>"; };
-		7180C1CF265ECA6000D56152 /* DuplicateMatchScore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DuplicateMatchScore.xcdatamodel; sourceTree = "<group>"; };
-		7180C1D0265ECA6000D56152 /* Match+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Match+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7180C1D0265ECA6000D56152 /* Matches+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Matches+CoreDataClass.swift"; sourceTree = "<group>"; };
+		71838011265ED6B00097F6E9 /* DuplicateMatchScore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DuplicateMatchScore.xcdatamodel; sourceTree = "<group>"; };
 		719313C5265E9D6F00B4789F /* DuplicateMatchScore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DuplicateMatchScore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		719313C8265E9D6F00B4789F /* DuplicateMatchScoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicateMatchScoreApp.swift; sourceTree = "<group>"; };
 		719313CA265E9D6F00B4789F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,8 +53,8 @@
 		7180C1CA265EC7E000D56152 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7180C1CE265ECA6000D56152 /* DuplicateMatchScore.xcdatamodeld */,
-				7180C1D0265ECA6000D56152 /* Match+CoreDataClass.swift */,
+				71838010265ED6B00097F6E9 /* DuplicateMatchScore.xcdatamodeld */,
+				7180C1D0265ECA6000D56152 /* Matches+CoreDataClass.swift */,
 				7180C1CD265ECA6000D56152 /* Players+CoreDataClass.swift */,
 				7180C1CC265ECA6000D56152 /* Scores+CoreDataClass.swift */,
 			);
@@ -177,12 +177,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71838012265ED6B00097F6E9 /* DuplicateMatchScore.xcdatamodeld in Sources */,
 				719313D2265E9D7100B4789F /* Persistence.swift in Sources */,
 				7180C1D2265ECA6000D56152 /* Scores+CoreDataClass.swift in Sources */,
 				719313CB265E9D6F00B4789F /* ContentView.swift in Sources */,
 				7180C1D3265ECA6000D56152 /* Players+CoreDataClass.swift in Sources */,
-				7180C1D5265ECA6000D56152 /* Match+CoreDataClass.swift in Sources */,
-				7180C1D4265ECA6000D56152 /* DuplicateMatchScore.xcdatamodeld in Sources */,
+				7180C1D5265ECA6000D56152 /* Matches+CoreDataClass.swift in Sources */,
 				719313C9265E9D6F00B4789F /* DuplicateMatchScoreApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,14 +376,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		7180C1CE265ECA6000D56152 /* DuplicateMatchScore.xcdatamodeld */ = {
+		71838010265ED6B00097F6E9 /* DuplicateMatchScore.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				7180C1CF265ECA6000D56152 /* DuplicateMatchScore.xcdatamodel */,
+				71838011265ED6B00097F6E9 /* DuplicateMatchScore.xcdatamodel */,
 			);
-			currentVersion = 7180C1CF265ECA6000D56152 /* DuplicateMatchScore.xcdatamodel */;
-			name = DuplicateMatchScore.xcdatamodeld;
-			path = ../../../Version2/DuplicateMatchScore/Models/DuplicateMatchScore.xcdatamodeld;
+			currentVersion = 71838011265ED6B00097F6E9 /* DuplicateMatchScore.xcdatamodel */;
+			path = DuplicateMatchScore.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
