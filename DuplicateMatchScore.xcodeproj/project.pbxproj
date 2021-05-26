@@ -7,22 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7180C1D2265ECA6000D56152 /* Scores+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7180C1CC265ECA6000D56152 /* Scores+CoreDataClass.swift */; };
+		7180C1D3265ECA6000D56152 /* Players+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7180C1CD265ECA6000D56152 /* Players+CoreDataClass.swift */; };
+		7180C1D4265ECA6000D56152 /* DuplicateMatchScore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7180C1CE265ECA6000D56152 /* DuplicateMatchScore.xcdatamodeld */; };
+		7180C1D5265ECA6000D56152 /* Match+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7180C1D0265ECA6000D56152 /* Match+CoreDataClass.swift */; };
 		719313C9265E9D6F00B4789F /* DuplicateMatchScoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719313C8265E9D6F00B4789F /* DuplicateMatchScoreApp.swift */; };
 		719313CB265E9D6F00B4789F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719313CA265E9D6F00B4789F /* ContentView.swift */; };
 		719313CD265E9D7100B4789F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719313CC265E9D7100B4789F /* Assets.xcassets */; };
 		719313D0265E9D7100B4789F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719313CF265E9D7100B4789F /* Preview Assets.xcassets */; };
 		719313D2265E9D7100B4789F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719313D1265E9D7100B4789F /* Persistence.swift */; };
-		719313D5265E9D7100B4789F /* DuplicateMatchScore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 719313D3265E9D7100B4789F /* DuplicateMatchScore.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7180C1CC265ECA6000D56152 /* Scores+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Scores+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7180C1CD265ECA6000D56152 /* Players+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Players+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7180C1CF265ECA6000D56152 /* DuplicateMatchScore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DuplicateMatchScore.xcdatamodel; sourceTree = "<group>"; };
+		7180C1D0265ECA6000D56152 /* Match+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Match+CoreDataClass.swift"; sourceTree = "<group>"; };
 		719313C5265E9D6F00B4789F /* DuplicateMatchScore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DuplicateMatchScore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		719313C8265E9D6F00B4789F /* DuplicateMatchScoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicateMatchScoreApp.swift; sourceTree = "<group>"; };
 		719313CA265E9D6F00B4789F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		719313CC265E9D7100B4789F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		719313CF265E9D7100B4789F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		719313D1265E9D7100B4789F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		719313D4265E9D7100B4789F /* DuplicateMatchScore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DuplicateMatchScore.xcdatamodel; sourceTree = "<group>"; };
 		719313D6265E9D7100B4789F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -37,6 +43,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7180C1C9265EC7CA00D56152 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7180C1CA265EC7E000D56152 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7180C1CE265ECA6000D56152 /* DuplicateMatchScore.xcdatamodeld */,
+				7180C1D0265ECA6000D56152 /* Match+CoreDataClass.swift */,
+				7180C1CD265ECA6000D56152 /* Players+CoreDataClass.swift */,
+				7180C1CC265ECA6000D56152 /* Scores+CoreDataClass.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7180C1CB265EC7F800D56152 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				719313CA265E9D6F00B4789F /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		719313BC265E9D6F00B4789F = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +88,13 @@
 		719313C7265E9D6F00B4789F /* DuplicateMatchScore */ = {
 			isa = PBXGroup;
 			children = (
+				7180C1C9265EC7CA00D56152 /* ViewModels */,
+				7180C1CB265EC7F800D56152 /* Views */,
+				7180C1CA265EC7E000D56152 /* Models */,
 				719313C8265E9D6F00B4789F /* DuplicateMatchScoreApp.swift */,
-				719313CA265E9D6F00B4789F /* ContentView.swift */,
 				719313CC265E9D7100B4789F /* Assets.xcassets */,
 				719313D1265E9D7100B4789F /* Persistence.swift */,
 				719313D6265E9D7100B4789F /* Info.plist */,
-				719313D3265E9D7100B4789F /* DuplicateMatchScore.xcdatamodeld */,
 				719313CE265E9D7100B4789F /* Preview Content */,
 			);
 			path = DuplicateMatchScore;
@@ -144,9 +177,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				719313D5265E9D7100B4789F /* DuplicateMatchScore.xcdatamodeld in Sources */,
 				719313D2265E9D7100B4789F /* Persistence.swift in Sources */,
+				7180C1D2265ECA6000D56152 /* Scores+CoreDataClass.swift in Sources */,
 				719313CB265E9D6F00B4789F /* ContentView.swift in Sources */,
+				7180C1D3265ECA6000D56152 /* Players+CoreDataClass.swift in Sources */,
+				7180C1D5265ECA6000D56152 /* Match+CoreDataClass.swift in Sources */,
+				7180C1D4265ECA6000D56152 /* DuplicateMatchScore.xcdatamodeld in Sources */,
 				719313C9265E9D6F00B4789F /* DuplicateMatchScoreApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,7 +321,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Cureton.DuplicateMatchScore;
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Cureton.DuplicateMatchScoreV2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,7 +344,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Cureton.DuplicateMatchScore;
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Cureton.DuplicateMatchScoreV2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -338,13 +376,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		719313D3265E9D7100B4789F /* DuplicateMatchScore.xcdatamodeld */ = {
+		7180C1CE265ECA6000D56152 /* DuplicateMatchScore.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				719313D4265E9D7100B4789F /* DuplicateMatchScore.xcdatamodel */,
+				7180C1CF265ECA6000D56152 /* DuplicateMatchScore.xcdatamodel */,
 			);
-			currentVersion = 719313D4265E9D7100B4789F /* DuplicateMatchScore.xcdatamodel */;
-			path = DuplicateMatchScore.xcdatamodeld;
+			currentVersion = 7180C1CF265ECA6000D56152 /* DuplicateMatchScore.xcdatamodel */;
+			name = DuplicateMatchScore.xcdatamodeld;
+			path = ../../../Version2/DuplicateMatchScore/Models/DuplicateMatchScore.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
