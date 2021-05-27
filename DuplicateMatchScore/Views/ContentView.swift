@@ -20,12 +20,17 @@ struct ContentView: View {
        
         NavigationView {
             List {  ForEach(items) { item in
-                NavigationLink(
+            /*    NavigationLink(
                     key, destination: MatchView(matchitem: item))
-                
-                    Text("Club on \(item.date!) formatter:itemFormatter")
-                        .lineLimit(1)
-                             
+              */
+           NavigationLink(
+            destination: MatchView(matchitem: item),
+            label: {
+                Text("\(item.date!) formatter:itemFormatter")
+                .lineLimit(1)
+                     }
+                )
+               
                          //   Text("\(item.club!)")
                         }
                         .onDelete(perform: deleteItems(offsets:))
