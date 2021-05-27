@@ -12,32 +12,46 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \Match.date, ascending: false)],
         animation: .default)
-    private var items: FetchedResults<Item>
-
+    private var items: FetchedResults<Match>
+    var key = "Show"
     var body: some View {
-        List {
-            ForEach(items) { item in
-                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-            }
-            .onDelete(perform: deleteItems)
+       
+        NavigationView {
+            List {  ForEach(items) { item in
+                NavigationLink(
+                    key, destination: MatchView(matchitem: item))
+                
+                    Text("Club on \(item.date!) formatter:itemFormatter")
+                        .lineLimit(1)
+                             
+                         //   Text("\(item.club!)")
+                        }
+                        .onDelete(perform: deleteItems(offsets:))
+                        
+                    }
+            .navigationTitle("Duplicate Matches")
+            .navigationBarItems(trailing: Button("New Match") {
+                addItem()            }
+            )
         }
+        
         .toolbar {
-            #if os(iOS)
             EditButton()
-            #endif
 
             Button(action: addItem) {
                 Label("Add Item", systemImage: "plus")
             }
         }
     }
+   
 
     private func addItem() {
         withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
+            let newItem = Match(context: viewContext)
+            newItem.date = Date()
+            newItem.club = "1st Thurs"
 
             do {
                 try viewContext.save()
@@ -69,7 +83,8 @@ struct ContentView: View {
 private let itemFormatter: DateFormatter = {
     let formatter = DateFormatter()
     formatter.dateStyle = .short
-    formatter.timeStyle = .medium
+    formatter.timeStyle = .none
+    
     return formatter
 }()
 

@@ -4,11 +4,11 @@
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <entity name="Match" representedClassName="Match" syncable="YES" codeGenerationType="category">
-        <attribute name="club" optional="YES" attributeType="String"/>
+        <attribute name="club" optional="YES" attributeType="String" defaultValueString="1st Thurs"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="names" optional="YES" attributeType="String"/>
     </entity>
-    <entity name="Player" representedClassName="Player" syncable="YES" codeGenerationType="class"/>
+    <entity name="Player" representedClassName="Player" syncable="YES" codeGenerationType="category"/>
     <elements>
         <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
         <element name="Match" positionX="-36" positionY="18" width="128" height="74"/>
