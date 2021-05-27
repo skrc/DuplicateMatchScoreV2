@@ -6,11 +6,24 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct MatchView: View {
+    @EnvironmentObject var model:Match
     var matchitem: Match
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        HStack (alignment: .bottom){
+            Text("Club Name")
+                .font(.largeTitle)
+                .multilineTextAlignment(.center)
+            Text("matchitem. date")
+                .font(.title)
+                .multilineTextAlignment(.center)
+                
+        }
+        Spacer()
+
     }
 }
 

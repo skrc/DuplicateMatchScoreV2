@@ -4,14 +4,19 @@
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <entity name="Match" representedClassName="Match" syncable="YES" codeGenerationType="category">
+        <attribute name="boardsperround" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="club" optional="YES" attributeType="String" defaultValueString="1st Thurs"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="matchkey" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="names" optional="YES" attributeType="String"/>
+        <attribute name="pairs" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="players" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="rounds" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <entity name="Player" representedClassName="Player" syncable="YES" codeGenerationType="category"/>
     <elements>
         <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
-        <element name="Match" positionX="-36" positionY="18" width="128" height="74"/>
+        <element name="Match" positionX="-36" positionY="18" width="128" height="149"/>
         <element name="Player" positionX="-9" positionY="63" width="128" height="29"/>
     </elements>
 </model>
