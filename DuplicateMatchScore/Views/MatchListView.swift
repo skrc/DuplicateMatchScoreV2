@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreData
 
-struct ContentView: View {
+struct MatchListView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
@@ -36,7 +36,7 @@ struct ContentView: View {
                         .onDelete(perform: deleteItems(offsets:))
                         
                     }
-            .navigationTitle("Duplicate Matches")
+            .navigationTitle("Match List")
             .navigationBarItems(trailing: Button("New Match") {
                 addItem()            }
             )
@@ -93,8 +93,8 @@ private let itemFormatter: DateFormatter = {
     return formatter
 }()
 
-struct ContentView_Previews: PreviewProvider {
+struct MatchListView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        MatchListView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

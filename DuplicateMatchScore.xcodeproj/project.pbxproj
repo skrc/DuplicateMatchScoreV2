@@ -12,7 +12,7 @@
 		7180C1D5265ECA6000D56152 /* Match+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7180C1D0265ECA6000D56152 /* Match+CoreDataClass.swift */; };
 		71838012265ED6B00097F6E9 /* DuplicateMatchScore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 71838010265ED6B00097F6E9 /* DuplicateMatchScore.xcdatamodeld */; };
 		719313C9265E9D6F00B4789F /* DuplicateMatchScoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719313C8265E9D6F00B4789F /* DuplicateMatchScoreApp.swift */; };
-		719313CB265E9D6F00B4789F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719313CA265E9D6F00B4789F /* ContentView.swift */; };
+		719313CB265E9D6F00B4789F /* MatchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719313CA265E9D6F00B4789F /* MatchListView.swift */; };
 		719313CD265E9D7100B4789F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719313CC265E9D7100B4789F /* Assets.xcassets */; };
 		719313D0265E9D7100B4789F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719313CF265E9D7100B4789F /* Preview Assets.xcassets */; };
 		719313D2265E9D7100B4789F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719313D1265E9D7100B4789F /* Persistence.swift */; };
@@ -29,7 +29,7 @@
 		71838011265ED6B00097F6E9 /* DuplicateMatchScore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DuplicateMatchScore.xcdatamodel; sourceTree = "<group>"; };
 		719313C5265E9D6F00B4789F /* DuplicateMatchScore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DuplicateMatchScore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		719313C8265E9D6F00B4789F /* DuplicateMatchScoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicateMatchScoreApp.swift; sourceTree = "<group>"; };
-		719313CA265E9D6F00B4789F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		719313CA265E9D6F00B4789F /* MatchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListView.swift; sourceTree = "<group>"; };
 		719313CC265E9D7100B4789F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		719313CF265E9D7100B4789F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		719313D1265E9D7100B4789F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -72,8 +72,8 @@
 		7180C1CB265EC7F800D56152 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				719313CA265E9D6F00B4789F /* ContentView.swift */,
 				71FA9726265FF42200C5037F /* MatchTabView.swift */,
+				719313CA265E9D6F00B4789F /* MatchListView.swift */,
 				71FA9722265F173D00C5037F /* MatchView.swift */,
 				71FA9728265FF4B900C5037F /* ScoreView.swift */,
 				71FA972A265FF4DB00C5037F /* ResultsView.swift */,
@@ -100,10 +100,10 @@
 		719313C7265E9D6F00B4789F /* DuplicateMatchScore */ = {
 			isa = PBXGroup;
 			children = (
+				719313C8265E9D6F00B4789F /* DuplicateMatchScoreApp.swift */,
 				7180C1C9265EC7CA00D56152 /* ViewModels */,
 				7180C1CB265EC7F800D56152 /* Views */,
 				7180C1CA265EC7E000D56152 /* Models */,
-				719313C8265E9D6F00B4789F /* DuplicateMatchScoreApp.swift */,
 				719313CC265E9D7100B4789F /* Assets.xcassets */,
 				719313D1265E9D7100B4789F /* Persistence.swift */,
 				719313D6265E9D7100B4789F /* Info.plist */,
@@ -193,7 +193,7 @@
 				719313D2265E9D7100B4789F /* Persistence.swift in Sources */,
 				71FA9723265F173D00C5037F /* MatchView.swift in Sources */,
 				7180C1D2265ECA6000D56152 /* Score+CoreDataClass.swift in Sources */,
-				719313CB265E9D6F00B4789F /* ContentView.swift in Sources */,
+				719313CB265E9D6F00B4789F /* MatchListView.swift in Sources */,
 				71FA972B265FF4DB00C5037F /* ResultsView.swift in Sources */,
 				71FA9727265FF42200C5037F /* MatchTabView.swift in Sources */,
 				7180C1D3265ECA6000D56152 /* Player+CoreDataClass.swift in Sources */,

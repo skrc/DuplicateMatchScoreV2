@@ -11,17 +11,32 @@ import CoreData
 var matchitem = Match()
 
 struct MatchTabView: View {
+    
+    @State var tabIndex = 2
+    
     var body: some View {
         
-        TabView {
+        TabView (selection: $tabIndex ) {
             
-            ResultsView()
-                .tabItem {
-                    VStack {
-                        Image(systemName: "star.fill")
-                        Text("Results")
-                    }
-                }
+            
+            MatchListView()
+                            .tabItem {
+                                VStack {
+                                    Image(systemName: "list.bullet")
+                                    Text("List")
+                                }
+                            }
+                            .tag(1)
+ 
+            
+            MatchView(matchitem: matchitem)
+                            .tabItem {
+                                VStack {
+                                    Image(systemName: "doc.plaintext.fill")
+                                    Text("Match")
+                                }
+                            }
+                            .tag(2)
             
             ScoreView()
                 .tabItem {
@@ -30,13 +45,16 @@ struct MatchTabView: View {
                         Text("Enter Scores")
                     }
                 }
-            MatchView(matchitem: matchitem)
+                .tag(3)
+            
+            ResultsView()
                 .tabItem {
                     VStack {
-                        Image(systemName: "list.bullet")
-                        Text("List")
+                        Image(systemName: "star.fill")
+                        Text("Results")
                     }
                 }
+                .tag(4)
         }
         .environmentObject(Match())
         

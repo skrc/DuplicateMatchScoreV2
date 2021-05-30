@@ -15,9 +15,9 @@ struct MatchView: View {
         
         HStack (alignment: .bottom){
             Text("Club Name")
-                .font(.largeTitle)
+                .font(.title)
                 .multilineTextAlignment(.center)
-            Text("matchitem. date")
+            Text(" Matchitem. date")
                 .font(.title)
                 .multilineTextAlignment(.center)
                 
@@ -30,6 +30,6 @@ struct MatchView: View {
 struct Match_Previews: PreviewProvider {
     static var previews: some View {
         
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        MatchListView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

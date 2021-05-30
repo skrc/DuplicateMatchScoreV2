@@ -13,7 +13,7 @@ struct DuplicateMatchScoreApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MatchTabView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
