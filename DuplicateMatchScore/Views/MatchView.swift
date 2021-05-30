@@ -11,9 +11,12 @@ import CoreData
 struct MatchView: View {
     @EnvironmentObject var model:Match
     var matchitem: Match
+    @State var maxPlayers = 12
+    var maxBoards = 2
+    var rounds = 7
     var body: some View {
         
-        HStack (alignment: .bottom){
+        HStack (alignment: .bottom) {
             Text("Club Name")
                 .font(.title)
                 .multilineTextAlignment(.center)
@@ -22,6 +25,20 @@ struct MatchView: View {
                 .multilineTextAlignment(.center)
                 
         }
+        HStack{
+            
+            Picker("Players", selection: $maxPlayers) {
+                Text("8, 2 Tables").tag(8)
+                Text("9, 2 Tables").tag(9)
+                Text("10, 2 Tables").tag(10)
+                Text("12, 3 Tables").tag(12)
+                Text("16, 4 tables").tag(16)
+            }
+            .pickerStyle(MenuPickerStyle())
+            Text("...: \(maxPlayers)")
+                .multilineTextAlignment(.trailing)
+        }
+        
         Spacer()
 
     }

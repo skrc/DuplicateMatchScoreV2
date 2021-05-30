@@ -12,13 +12,12 @@ var matchitem = Match()
 
 struct MatchTabView: View {
     
-    @State var tabIndex = 2
+    @State var tabIndex = 0
+
     
     var body: some View {
         
         TabView (selection: $tabIndex ) {
-            
-            
             MatchListView()
                             .tabItem {
                                 VStack {
@@ -27,8 +26,6 @@ struct MatchTabView: View {
                                 }
                             }
                             .tag(1)
- 
-            
             MatchView(matchitem: matchitem)
                             .tabItem {
                                 VStack {
