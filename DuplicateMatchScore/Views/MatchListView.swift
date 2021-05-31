@@ -20,10 +20,8 @@ struct MatchListView: View {
        
         NavigationView {
             List {  ForEach(items) { item in
-            /*    NavigationLink(
-                    key, destination: MatchView(matchitem: item))
-              */
-           NavigationLink(
+            
+            NavigationLink(
             destination: MatchView(matchitem: item),
             label: {
                 Text("\(item.date!) formatter:itemFormatter")
