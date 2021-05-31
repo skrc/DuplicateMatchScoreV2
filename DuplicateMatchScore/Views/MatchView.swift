@@ -11,7 +11,7 @@ import CoreData
 struct MatchView: View {
     @EnvironmentObject var model:Match
     var matchitem: Match
-    @State var maxPlayers = Match.
+    @State var maxPlayers = 12
     var maxBoards = 2
     var rounds = 7
     var body: some View {

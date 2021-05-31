@@ -51,7 +51,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7180C1C9265EC7CA00D56152 /* ViewModels */ = {
+		7122B71B26654DB60089853C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -101,7 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				719313C8265E9D6F00B4789F /* DuplicateMatchScoreApp.swift */,
-				7180C1C9265EC7CA00D56152 /* ViewModels */,
+				7122B71B26654DB60089853C /* ViewModels */,
 				7180C1CB265EC7F800D56152 /* Views */,
 				7180C1CA265EC7E000D56152 /* Models */,
 				719313CC265E9D7100B4789F /* Assets.xcassets */,
