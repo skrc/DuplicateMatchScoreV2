@@ -16,6 +16,7 @@ struct MatchListView: View {
         animation: .default)
     
     private var items: FetchedResults<Match>
+    @State var newMatch = ""
     var key = "Show"
     var body: some View {
         VStack {
@@ -23,35 +24,42 @@ struct MatchListView: View {
             .aspectRatio(contentMode: .fit)
         
         NavigationView {
-            List {  ForEach(items) { item in
-               
-            NavigationLink(
-            destination: MatchView(matchitem: item),
-            label: {
-                Text("\(item.date!) formatter:itemFormatter")
-                .lineLimit(1)
-                     }
-                )
-               
-                         //   Text("\(item.club!)")
-                        }
-                        .onDelete(perform: deleteItems(offsets:))
-                        
-                    }
-            .navigationTitle("Match List")
-            .navigationBarItems(trailing: Button("New Match") {
-                addItem()            }
-            )
-        }
-        }
+            List{
+                Section (header: Text("Add New Match")){
+                    Text("New item info will go here")
+                } // Section One Ends
+                Section {
+                    // For items...
+                    ForEach(items) { item in
+                     
+                  NavigationLink(
+                  destination: MatchView(matchitem: item),
+                  label: {
+                      Text("\(item.date!) formatter:itemFormatter")
+                      .lineLimit(1)
+                           }
+                      )
+                     
+                              } // End for Each items
+                              .onDelete(perform: deleteItems(offsets:))
+                              
+                          
+                  .navigationTitle("Match List")
+                  .navigationBarItems(trailing: Button("New Match") {
+                      addItem()            })
+                } //Section 2 ends
+              }
+            } // End Navigation View
+          } //End VStack
+   
         .toolbar {
             EditButton()
 
             Button(action: addItem) {
-                Label("Add Item", systemImage: "plus")
-            }
+               Label("Add Item", systemImage: "plus") }
+        } // End Body
         }
-    }
+ //   }
    
 
     private func addItem() {
