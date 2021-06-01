@@ -9,10 +9,10 @@ import SwiftUI
 import CoreData
 
 struct MatchView: View {
-    @EnvironmentObject var model:Match
+    @Environment(\.managedObjectContext) private var viewContext
     var matchitem: Match
     @State var maxPlayers = 12
-    var maxBoards = 2
+    @State var maxBoards = 2
     var rounds = 7
     var body: some View {
         
@@ -36,11 +36,23 @@ struct MatchView: View {
                             Text("16, 4 tables").tag(16)
                         }
                         .pickerStyle(MenuPickerStyle())
-                        Text("...: \(maxPlayers)")
+                        Text("... \(maxPlayers)")
                             .multilineTextAlignment(.trailing)
                     }
+                HStack{
+                
+                Picker("Boards Per Round", selection: $maxBoards) {
+                    Text("2").tag(2)
+                    Text("3").tag(3)
+                    Text("4").tag(4)
+                
                     
-                    Spacer()
+                }
+                .pickerStyle(MenuPickerStyle())
+                Text("... \(maxBoards)")
+                    .multilineTextAlignment(.trailing)
+            }
+            Spacer()
         }
         
         

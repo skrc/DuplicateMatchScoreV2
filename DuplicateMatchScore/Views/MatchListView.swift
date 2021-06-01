@@ -14,13 +14,17 @@ struct MatchListView: View {
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Match.date, ascending: false)],
         animation: .default)
+    
     private var items: FetchedResults<Match>
     var key = "Show"
     var body: some View {
-       
+        VStack {
+        Image("logo").resizable()
+            .aspectRatio(contentMode: .fit)
+        
         NavigationView {
             List {  ForEach(items) { item in
-            
+               
             NavigationLink(
             destination: MatchView(matchitem: item),
             label: {
@@ -39,7 +43,7 @@ struct MatchListView: View {
                 addItem()            }
             )
         }
-        
+        }
         .toolbar {
             EditButton()
 
@@ -55,6 +59,7 @@ struct MatchListView: View {
             let newItem = Match(context: viewContext)
             newItem.date = Date()
             newItem.club = "1st Thurs"
+            
 
             do {
                 try viewContext.save()
