@@ -26,7 +26,23 @@ struct MatchListView: View {
         NavigationView {
             List{
                 Section (header: Text("Add New Match")){
-                    Text("New item info will go here")
+                   // Text("New item info will go here")
+                TextField("Enter Club Name ...", text: $newMatch )
+                    Button(action: {
+                        if !newMatch.isEmpty {
+                            let newItem = Match(context: viewContext)
+                            newItem.club = newMatch
+                            newItem.date = Date()
+                            do {
+                                try viewContext.save()
+                            } catch {
+                                let nsError = error as NSError
+                                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+                            }
+                            }
+                    }, label: {Text("Save")})
+                    Spacer()
+                
                 } // Section One Ends
                 Section {
                     // For items...
@@ -35,7 +51,8 @@ struct MatchListView: View {
                   NavigationLink(
                   destination: MatchView(matchitem: item),
                   label: {
-                      Text("\(item.date!) formatter:itemFormatter")
+                    //  Text("\(item.date!) formatter:itemFormatter")
+                      Text("\(item.club!) ")
                       .lineLimit(1)
                            }
                       )
@@ -100,9 +117,11 @@ private let itemFormatter: DateFormatter = {
     let formatter = DateFormatter()
     formatter.dateStyle = .short
     formatter.timeStyle = .none
+//    formatter.string(from: <#T##Date#>)
     
     return formatter
 }()
+// func string(from date: Date) -> String
 
 struct MatchListView_Previews: PreviewProvider {
     static var previews: some View {
