@@ -25,10 +25,12 @@ struct MatchListView: View {
         
         NavigationView {
             List{
+           // VStack {
                 Section (header: Text("Add New Match")){
                    // Text("New item info will go here")
-                TextField("Enter Club Name ...", text: $newMatch )
-                    Button(action: {
+                HStack {
+                   TextField("Enter Club Name ...", text: $newMatch )
+                   Button(action: {
                         if !newMatch.isEmpty {
                             let newItem = Match(context: viewContext)
                             newItem.club = newMatch
@@ -41,31 +43,30 @@ struct MatchListView: View {
                             }
                             }
                     }, label: {Text("Save")})
-                    Spacer()
+                   }
                 
                 } // Section One Ends
+                
                 Section {
                     // For items...
                     ForEach(items) { item in
-                     
-                  NavigationLink(
-                  destination: MatchView(matchitem: item),
-                  label: {
-                    //  Text("\(item.date!) formatter:itemFormatter")
-                      Text("\(item.club!) ")
-                      .lineLimit(1)
-                           }
-                      )
-                     
-                              } // End for Each items
-                              .onDelete(perform: deleteItems(offsets:))
-                              
-                          
-                  .navigationTitle("Match List")
-                  .navigationBarItems(trailing: Button("New Match") {
-                      addItem()            })
+                        
+                        NavigationLink(
+                            destination: MatchView(matchitem: item),
+                            label: {
+                                //  Text("\(item.date!) formatter:itemFormatter")
+                                Text("\(item.club!) ")
+                                //     .lineLimit(1)
+                            }
+                        )
+                        
+                    } // End for Each items
+                    .onDelete(perform: deleteItems(offsets:))
+                    .navigationTitle("Match List")
+                 //   .navigationBarItems(trailing: Button("New Match") {
+                 //                           addItem()            })
                 } //Section 2 ends
-              }
+            }  //end VStack or List
             } // End Navigation View
           } //End VStack
    
