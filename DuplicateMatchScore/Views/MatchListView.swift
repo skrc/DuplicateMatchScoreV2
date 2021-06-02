@@ -41,13 +41,19 @@ struct MatchListView: View {
                                 let nsError = error as NSError
                                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
                             }
+                            newMatch = ""
                             }
-                    }, label: {Text("Save")})
+                   }, label: {Text("Save")})
+                   .padding(2.0)
+                   .frame(width: 90.0, height: 30.0)
+                   .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                   .border(/*@START_MENU_TOKEN@*/Color.blue/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
+                   .cornerRadius(/*@START_MENU_TOKEN@*/5.0/*@END_MENU_TOKEN@*/)
                    }
                 
                 } // Section One Ends
                 
-                Section {
+                Section (header: Text("My Matches")) {
                     // For items...
                     ForEach(items) { item in
                         
@@ -66,7 +72,7 @@ struct MatchListView: View {
                  //   .navigationBarItems(trailing: Button("New Match") {
                  //                           addItem()            })
                 } //Section 2 ends
-            }  //end VStack or List
+            }  //end  List
             } // End Navigation View
           } //End VStack
    
