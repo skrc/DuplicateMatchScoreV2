@@ -1,8 +1,8 @@
 //
 //  Match+CoreDataClass.swift
-//  coredatademo
+//  DuplicateMatchScore
 //
-//  Created by Sandra K Cureton on 5/16/21.
+//  Created by Sandra K Cureton on 6/3/21.
 //
 //
 
