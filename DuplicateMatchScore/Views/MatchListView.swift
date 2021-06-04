@@ -22,6 +22,11 @@ struct MatchListView: View {
         VStack {
         Image("logo").resizable()
             .aspectRatio(contentMode: .fit)
+                    .frame(width: 600, height: 200, alignment: .top)
+                //    .border(Color.blue)
+               //     .clipped()
+            
+            
         
         NavigationView {
             List{
