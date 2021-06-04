@@ -41,6 +41,7 @@ struct MatchView: View {
                 .pickerStyle(MenuPickerStyle())
                 Text("... \(maxPlayers)")
                     .multilineTextAlignment(.trailing)
+                    .padding(+13)
             }
           //  .padding(.top, -55.0)
             HStack{
