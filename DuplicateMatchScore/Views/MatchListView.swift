@@ -56,7 +56,6 @@ struct MatchListView: View {
                 Section (header: Text("My Matches")) {
                     // For items...
                     ForEach(items) { item in
-                        
                         NavigationLink(
                             destination: MatchView(matchitem: item),
                             label: {
