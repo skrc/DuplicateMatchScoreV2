@@ -1,6 +1,6 @@
 //
-//  RecipeTabView.swift
-//  Recipe List App
+//  Duplicate Match Scoring App
+//  MatchTabView
 //
 //  Created by Christopher Ching on 2021-02-03.
 //
@@ -12,7 +12,7 @@ var matchitem = Match()
 
 struct MatchTabView: View {
     
-    @State var tabIndex = 0
+    @State var tabIndex = 1
 
     
     var body: some View {
